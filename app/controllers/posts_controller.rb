@@ -22,19 +22,17 @@ class PostsController < ApplicationController
   end
 
   # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(post_params)
 
-      if @post.save
-        redirect_to @post, notice: 'Post was successfully created.'   
-      else 
-        render action: 'new'
+    if @post.save
+      redirect_to @post, notice: 'Post was successfully created.'   
+    else 
+      render action: 'new'
     end
   end
 
   # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     if @post.update(post_params)
       redirect_to @post, notice: 'Post was successfully updated.'
@@ -44,7 +42,6 @@ class PostsController < ApplicationController
   end
 
   # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     redirect_to posts_url
