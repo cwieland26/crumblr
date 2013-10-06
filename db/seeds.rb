@@ -36,7 +36,7 @@ post3 = Post.new
 6.times {post3.hearts.create}
 
 #post4
-post4 = Post.new{title: "post4", kind: "text"}
+post4 = Post.new(title: "post4", kind: "text")
 post4.content = <<content
 	sample text with "qoutes"
 content
