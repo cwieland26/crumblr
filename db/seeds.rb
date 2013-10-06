@@ -27,11 +27,11 @@ post2.save
 5.times { post2.hearts.create}
 
 #cookies
-post3 = Post.create(
-	title: "cookies",
-	kind: "image",
-	content: "http://graphics8.nytimes.com/images/2008/07/09/dining/09chip-600.jpg"
-)
+post3 = Post.new
+	post3.title = "cookies"
+	post3.title = "image"
+	psot3.content = "http://graphics8.nytimes.com/images/2008/07/09/dining/09chip-600.jpg"
+	post3.save
 
 6.times {post3.hearts.create}
 
