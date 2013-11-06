@@ -28,18 +28,18 @@ post2.save
 
 #cookies
 post3 = Post.new
-	post3.title = "cookies"
-	post3.title = "image"
-	post3.content = "http://graphics8.nytimes.com/images/2008/07/09/dining/09chip-600.jpg"
-	post3.save
+post3.title = "cookies"
+post3.kind = "image"
+post3.content = "http://graphics8.nytimes.com/images/2008/07/09/dining/09chip-600.jpg"
+post3.save
 
 6.times {post3.hearts.create}
 
 #post4
 post4 = Post.new(title: "post4", kind: "text")
-post4.content = <<content
+post4.content = <<CONTENT
 	sample text with "qoutes"
-content
+CONTENT
 
 post4.save
 2.times {post4.hearts.create}
